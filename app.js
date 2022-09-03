@@ -15,6 +15,7 @@ function errorHandler(error){
 }
 
 function clickHandler(){
+    outputDiv.innerText="Loading...";
     var enteredText = inputText.value;
     if(enteredText===""){
         outputDiv.innerText="Please enter some text!";
