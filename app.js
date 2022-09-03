@@ -16,12 +16,16 @@ function errorHandler(error){
 
 function clickHandler(){
     var enteredText = inputText.value;
-    fetch(generateTranslationURL(enteredText))
-    .then(response => response.json())
-    .then(json => {
-        outputDiv.innerText = json.contents.translated;
-    })
-    .catch(errorHandler)
+    if(enteredText===""){
+        outputDiv.innerText="Please enter some text!";
+    } else{
+        fetch(generateTranslationURL(enteredText))
+        .then(response => response.json())
+        .then(json => {
+            outputDiv.innerText = json.contents.translated;
+        })
+        .catch(errorHandler) 
+    }   
 }
 
 function clearHandler(){
