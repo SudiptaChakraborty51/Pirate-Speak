@@ -89,3 +89,20 @@ footer {
 p{
     padding-bottom: 2rem;
 }
+
+.footer-list {
+    padding-inline-start: 0px;
+    margin: 0px;
+}
+
+.portfolio {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+}
